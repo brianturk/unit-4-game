@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn|Abril+Fatface|Ruge+Boogie" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/javascript/jquery-ui.min.js"></script>
+    <title>Crystal Collector Game</title>
+</head>
+
+<body>
+
+    <div id="title">70's Beatles Match Game</div>
+    <div id="random_number"></div>
+    <div id="score">
+        <p id="score_title">Overall Wins and Losses</p>
+        <div id="winandloss">
+            <p>
+                <div id="win_title">Wins: <span id="wins">0</span></div>
+                <div id="loss_title">Losses: <span id="losses">0</span></div></span>
+            </p>
+        </div>
+    </div>
+    <div id="compandplayer">
+        <div id="comp_box">
+            <p id="comp_title">Computer Pick</p>
+            <p id="computer_num">23</p>
+        </div>
+
+        <div id="player_box">
+            <p id="player_title">Your Total</p>
+            <p id="player_num">14</p>
+        </div>
+    </div>
+    <div id="beatles">
+
+        <img id="john" class="beatle_image" src="assets/images/john-sm.jpg">
+        <img id="paul" class="beatle_image" src="assets/images/paul-sm.jpg">
+        <img id="george" class="beatle_image" src="assets/images/george-sm.jpg">
+        <img id="ringo" class="beatle_image" src="assets/images/ringo-sm.jpg">
+    </div>
+
+    <div id="instructions">
+        <p id="instruction_text"></p>
+    </div>
+
+    <audio class="audios" id="button_audio" > 
+        <source src="assets/audio/Tiny_Button_Push.wav" type="audio/mpeg">
+     </audio>
+     <audio class="audios" id="win_audio" > 
+        <source src="assets/audio/scream.wav" type="audio/mpeg">
+     </audio>
+     <audio class="audios" id="loss_audio" > 
+        <source src="assets/audio/wah_wah_sound.wav" type="audio/mpeg">
+     </audio>
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>

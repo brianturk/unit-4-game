@@ -1,0 +1,155 @@
+body {
+    background-image: url("../../assets/images/background.png");
+    background-size: cover;
+    text-align: center;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.beatle_image {
+    border-width: 30px;
+    border-color: green;
+    border-style: solid;
+    width: 125px; 
+    border-radius: 25px;
+}
+
+#title {
+    font-family: 'Vollkorn', serif;
+    font-style: "black italic";
+    font-size: 75px;
+    text-shadow: 2px 2px #ff0000;
+}
+
+
+#score {
+    position: relative;
+    background: rgb(116, 116, 185);
+    width: 400px;
+    text-align:center;
+    margin: auto;
+    border-width: 5px;
+    border-color:rgb(83, 83, 131);
+    border-style: solid;
+    opacity: .9;
+    margin-bottom: 5px;
+}
+
+#score_title{
+    background: rgb(83, 83, 131);
+    padding-bottom: 3px;
+    color: white;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+#win_title {
+    position: relative;
+    float: left;
+    font-size: 28px;
+    width: 45%;
+    margin:0;
+    text-align:left;
+    padding-left:10px;
+}
+
+#loss_title {
+    position: relative;
+    float: right;
+    font-size: 28px;
+    text-align: left;
+    width: 50%;
+    margin: 0;
+    padding-right:10px;
+}
+
+#winandloss {
+    height: 34px;
+}
+
+
+#comp_title{
+    background: rgb(131, 122, 82);
+    padding-bottom: 3px;
+    color: white;
+    font-size: 18px;
+}
+
+#player_title{
+    background: rgb(131, 122, 82);
+    padding-bottom: 3px;
+    color: white;
+    font-size: 18px;
+}
+
+
+#comp_box {
+    position: relative;
+    float: left;
+    background: rgb(226, 211, 142);
+    width: 150px;
+    text-align:center;
+    margin: auto;
+    border-width: 5px;
+    border-color:rgb(131, 122, 82);
+    border-style: solid;
+    opacity: .9;
+    margin-right: 3px;
+    height: 81px;
+}
+
+#compandplayer {
+    position: relative;
+    margin: 0 auto;
+    width: 330px;
+    margin-bottom: 5px;
+    text-align: center;
+    display: inline-block;
+}
+
+#computer_num, #player_num {
+    font-size: 60px;
+    width: 100%;
+    margin:0;
+    text-align: center;
+}
+
+
+#player_box {
+    position: relative;
+    float: left;
+    background: rgb(226, 211, 142);
+    width: 150px;
+    text-align:center;
+    margin: auto;
+    border-width: 5px;
+    border-color:rgb(131, 122, 82);
+    border-style: solid;
+    opacity: .9;
+    margin-left: 3px;
+    height: 81px;
+}
+
+#instructions {
+    position: relative;
+    background: rgb(229, 229, 236);
+    width: 700px;
+    text-align:center;
+    margin: auto;
+    border-width: 5px;
+    border-color:rgb(147, 147, 150);
+    border-style: solid;
+    opacity: .9;
+    margin-top: 40px;
+    padding: 5px;
+    font-family: 'Ruge Boogie', cursive;
+    font-size: 30px;
+    vertical-align: middle;
+    height: 120px;
+    line-height: 120px;
+}
+
+#instruction_text {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 30px;
+}
