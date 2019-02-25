@@ -4,12 +4,26 @@ var beatlesNum = [0, 0, 0, 0];
 var gameStatus = "begin";
 var wins = 0;
 var losses = 0;
+var first = true;
 
 $(document).ready(function () {
 
     startgame();
 
     $(document).on("click", ".beatle_image", function (event) {
+
+
+        if (first) {
+            var sec = 0;
+            function pad(val) { return val > 9 ? val : "0" + val; }
+            setInterval(function () {
+                $("#time").text(pad(parseInt(sec / 60, 10)) + ":" + pad(++sec % 60))
+                // $("#seconds").html(pad(++sec%60));
+                // $("#minutes").html(pad(parseInt(sec/60,10)));
+            }, 1000);
+            first = false;
+        }
+
 
         if (gameStatus != "over") {
 
@@ -37,6 +51,7 @@ $(document).ready(function () {
                 wins++;
                 $("#wins").text(wins);
                 $("#win_audio").trigger("play");
+                $(".beatle_image").css("cursor", "auto");
 
             } else if (playerTotal > computerNum) {  //game over and they lost
                 gameStatus = "over";
@@ -45,6 +60,7 @@ $(document).ready(function () {
                 losses++;
                 $("#losses").text(losses);
                 $("#loss_audio").trigger("play");
+                $(".beatle_image").css("cursor", "auto");
             }
         }
 
@@ -52,10 +68,13 @@ $(document).ready(function () {
     });
 
 
-    
+
 
 
 });
+
+
+
 
 
 function startgame() {
@@ -63,16 +82,17 @@ function startgame() {
     //If win is not possible, pick again
     var winPossible = false;
 
+    $(".beatle_image").css("cursor", "pointer");
 
     if (gameStatus === "over") {
         $("#instruction_text").text("Here we go again.  Select a Beatle to start.  Good Luck!");
-    }else {
-         $("#instruction_text").text("Welcome to the 70's Beatles Collector Game!  The computer has picked a number.  You have to match that number by selecting Beatles.  Each Beatle has a hidden value from 1 to 12.  When you select a Beatle, its value is revealed and added to your total score.  Good Luck!");
+    } else {
+        $("#instruction_text").text("Welcome to the 70's Beatles Match Game!  The computer has picked a number.  You have to match that number by selecting Beatles.  Each Beatle has a hidden value from 1 to 12.  When you select a Beatle, its value is revealed and added to your total score.  Good Luck!");
     }
     gameStatus = "begin";
     playerTotal = 0;
 
-    
+
 
     while (!winPossible) {
         //pick computer random number 19 to 120
