@@ -47,7 +47,7 @@ $(document).ready(function () {
             if (playerTotal === computerNum) { //game over and they won
                 gameStatus = "over";
                 $("#instruction_text").text("");
-                $("#instruction_text").append('Congratulations, you Won! <a href="javascript:startgame()">Play Again</a>');
+                $("#instruction_text").append('Congratulations, you won! <a href="javascript:startgame()">Play Again</a>');
                 wins++;
                 $("#wins").text(wins);
                 $("#win_audio").trigger("play");
