@@ -93,8 +93,8 @@ function startgame() {
     playerTotal = 0;
 
 
-
     while (!winPossible) {
+
         //pick computer random number 19 to 120
         computerNum = Math.floor((Math.random() * 101) + 19);
 
@@ -143,6 +143,7 @@ function startgame() {
             }
             return ps;
         }
+
 
     }
 
